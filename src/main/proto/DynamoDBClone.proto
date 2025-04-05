@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package com.dynamodbclone;
+
+service DynamoDBClone {
+  rpc PutItem (PutItemRequest) returns (PutItemResponse);
+  rpc GetItem (GetItemRequest) returns (GetItemResponse);
+  rpc DeleteItem (DeleteItemRequest) returns (DeleteItemResponse);
+}
+
+message Attribute {
+  string key = 1;
+  string value = 2;
+}
+
+message PutItemRequest {
+  string table = 1;
+  string key = 2;
+  string value = 3;
+}
+
+message PutItemResponse {
+  bool success = 1;
+}
+
+message GetItemRequest {
+  string table = 1;
+  string key = 2;
+}
+
+message GetItemResponse {
+  Attribute item = 1;
+}
+
+message DeleteItemRequest {
+  string table = 1;
+  string key = 2;
+}
+
+message DeleteItemResponse {
+  bool success = 1;
+}
