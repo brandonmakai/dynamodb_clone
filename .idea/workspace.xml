@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c53f10f5-0812-4c93-982f-4e99f195e5bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dynamodbclone/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dynamodbclone/client/gRPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dynamodbclone/server/gRPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/proto/DynamoDBClone.proto" afterDir="false" />
-    </list>
+    <list default="true" id="c53f10f5-0812-4c93-982f-4e99f195e5bc" name="Changes" comment="Initial Commit - gRPC Hashmap" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +42,7 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "/Users/brandonmakai/Documents/DynamoDBClone/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
@@ -113,6 +103,19 @@
       <option name="presentableId" value="Default" />
       <updated>1743657426696</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit - gRPC Hashmap">
+      <option name="closed" value="true" />
+      <created>1743828750601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743828750601</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit - gRPC Hashmap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit - gRPC Hashmap" />
   </component>
 </project>
