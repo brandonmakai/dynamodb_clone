@@ -9,14 +9,58 @@ service DynamoDBClone {
 }
 
 message Attribute {
-  string key = 1;
-  string value = 2;
+  string name = 1;
+  oneof value {
+    string s = 2;
+    int64 i = 3;
+    bool b = 4;
+    double d = 5;
+    Attribute a = 6;
+  }
+}
+
+message Item {
+  string partition_key = 1;
+  string sort_key = 2;
+  repeated Attribute attributes = 3;
+}
+
+message Table {
+  string name = 1;
+  string partition_key = 2;
+  optional string sort_key = 3;
+  repeated Item items = 4;
+}
+
+message CreateTableRequest {
+  string name = 1;
+  string partition_key = 2;
+  optional string sort_key = 3;
+}
+
+message CreateTableResponse {
+  Table table = 1;
+}
+
+message GetTableRequest {
+  string name = 1;
+}
+
+message GetTableResponse {
+  Table table = 1;
+}
+
+message DeleteTableRequest {
+  string name = 1;
+}
+
+message DeleteTableResponse {
+  bool success = 1;
 }
 
 message PutItemRequest {
   string table = 1;
-  string key = 2;
-  string value = 3;
+  Item item = 2;
 }
 
 message PutItemResponse {
@@ -25,18 +69,20 @@ message PutItemResponse {
 
 message GetItemRequest {
   string table = 1;
-  string key = 2;
+  string partition_key = 2;
+  optional string sort_key = 3;
 }
 
 message GetItemResponse {
-  Attribute item = 1;
+  repeated Item items = 1;
 }
 
 message DeleteItemRequest {
   string table = 1;
-  string key = 2;
+  string partition_key = 2;
+  optional string sort_key = 3;
 }
 
 message DeleteItemResponse {
-  bool success = 1;
+    bool success = 1;
 }
